@@ -8,10 +8,9 @@
   },
   "author": "Jacob Atkinson",
   "license": "ISC",
-  "devDependencies": {
-    "express": "^4.16.4"
-  },
+  "homepage": "https://github.com/jiatkinson/Atkinson_J_ChatApp",
   "dependencies": {
+    "express": "^4.16.4",
     "socket.io": "^2.2.0"
   }
 }
