@@ -11,6 +11,9 @@
   "homepage": "https://github.com/jiatkinson/Atkinson_J_ChatApp",
   "dependencies": {
     "express": "^4.16.4",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "node-sass": "^4.9.3",
     "socket.io": "^2.2.0"
   }
 }
