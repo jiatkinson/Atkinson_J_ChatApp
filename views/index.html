@@ -3,29 +3,90 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Socket IO Chat with Node!</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/foundation.css">
 	<script src="https://unpkg.com/vue"></script> 
 </head>
 <body>
-	<main id="app">		
-		<section class="form-container">
-			<label for="nickname">Your Nickname (optional)</label>
-			<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
-			
-			<form>
-				<label for="message">Something to say?</label>
-				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
-				<input type="submit" @click.prevent="dispatchMessage">
-			</form>
-		</section>
+	<main id="app" class="row">		
+		<div id="backgroundColour" class="form-container">
+			<section class="small-12 large-7 columns">
+				<form class="small-12 large-7 columns">
+					<h2 for="nickname">Your name:</h2>
+					<input v-model="nickname" type="text" id="nickname" class="nickname">
+				</form>
+
+				<form class="small-12 large-12 columns end">
+					<h2 for="message">Send me a message.</h2>
+					<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
+					<input type="submit" @click.prevent="dispatchMessage">
+				</form>
+			</section>
+
+
+			<section class="custom-settings row">
+
+			<script>
+
+				function changeRed() {
+					document.getElementById("app").classList.remove('blue','black');
+					document.getElementById("app").classList.add('red');
+				}
+				function changeBlue() {
+					document.getElementById("app").classList.remove('black','red');
+					document.getElementById("app").classList.add('blue');
+				}
+				function changeBlack() {
+					document.getElementById("app").classList.remove('blue','red');
+					document.getElementById("app").classList.add('black');
+				}
+
+				function changeDefaultFont() {
+					document.getElementById("app").classList.remove('italic','bold');
+					document.getElementById("app").classList.add('default');
+				}
+				function changeBold() {
+					document.getElementById("app").classList.remove('default','italic');
+					document.getElementById("app").classList.add('bold');
+				}
+				function changeItalic() {
+					document.getElementById("app").classList.remove('default','bold');
+					document.getElementById("app").classList.add('italic');
+				}
+
+
+			</script>
+
+				<div>
+					<h1>Choose Theme:</h1>
+
+					<a onclick="changeBlack()"><i class="fas fa-square"></i></a>
+					<a onclick="changeRed()"><i class="fas fa-square"></i></a>
+					<a onclick="changeBlue()"><i class="fas fa-square"></i></a>
+
+
+					<h2>Font Style</h2>
+
+					<a onclick="changeDefaultFont()"><i class="fas fa-font"></i></a>
+					<a onclick="changeBold()"><i class="fas fa-bold"></i></a>
+					<a onclick="changeItalic()"><i class="fas fa-italic"></i></a>
+
+				</div>
+			</section>
+		</div>
 		
 		<section class="messages">
 			<ul id="messages" v-for="message in messages">
                 <newmessage :msg="message"></newmessage>
 			</ul>
-		</section>		
+		</section>	
+
 	</main>
 	<script src="/socket.io/socket.io.js"></script>
 	<script type="module" src="js/main_vm.js"></script>
+	<script src="/js/vendor/jquery.js"></script>
+    <script src="/js/vendor/what-input.js"></script>
+    <script src="/js/vendor/foundation.js"></script>
 </body>
 </html>

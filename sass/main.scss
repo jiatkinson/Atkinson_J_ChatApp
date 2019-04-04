@@ -1,3 +1,7 @@
+@import 'modules/_message';
+@import '_vars';
+
+
 /* reset */
 * {
 	margin: 0; padding: 0; box-sizing: border-box;
@@ -5,20 +9,20 @@
 
 html, body { height: 100%; }
 
-body { font: 16px Helvetica, Arial; }
+body {
+	font: 16px Helvetica, Arial;
+}
 
 main { 
 	display: flex;
 	height: 100%;
 	flex-direction: row;
 }
+
 .form-container, .messages { padding: 20px; }
 .form-container { 
 	flex: 1; 
-	border: 6px solid #bfcfd6;
-	background-color: #e3edf1;
-
-	label { display: block; margin-bottom: 0.5rem; }
+	background-color: white;
 }
 
 .messages { 
@@ -39,8 +43,6 @@ input, textarea {
 }
 
 textarea { height: 135px; }
-
-
 
 form {
 	//background: #000;
@@ -67,6 +69,56 @@ form {
 	li:nth-child(odd) { background: #eee; }
 }
 
-// imports
+.red {
+	
+	h1,h2 {
+		color: white;
+		}
 
-@import 'modules/_message';
+	.form-container {
+		background-color: #c45353;
+	}
+	
+}
+
+.blue {
+	
+	h1,h2 {
+		color: white;
+		}
+
+	.form-container {
+		background-color: #5388c4;
+	}
+	
+}
+
+.black {
+	
+	h1,h2 {
+		color: white;
+		}
+
+	.form-container {
+		background-color: black;
+	}
+	
+}
+
+.bold {
+	h1,h2 {
+		font-weight: bold;
+		}
+}
+
+.italic {
+	h1,h2 {
+		font-style: italic;
+		}
+}
+
+.default {
+	h1,h2 {
+		font-weight: none;
+		}
+}
