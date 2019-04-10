@@ -242,6 +242,9 @@ form input[type=submit] {
 .indie .submitBut {
   font-family: "Indie Flower", cursive;
 }
+.indie .new-message {
+  font-family: "Indie Flower", cursive;
+}
 
 .arial h1, .arial h2 {
   font-family: Arial, Helvetica, sans-serif;
@@ -252,6 +255,9 @@ form input[type=submit] {
 .arial .submitBut {
   font-family: Arial, Helvetica, sans-serif;
 }
+.arial .new-message {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 .concert h1, .concert h2 {
   font-family: "Concert One", cursive;
@@ -260,6 +266,9 @@ form input[type=submit] {
   font-family: "Concert One", cursive;
 }
 .concert .submitBut {
+  font-family: "Concert One", cursive;
+}
+.concert .new-message {
   font-family: "Concert One", cursive;
 }
 
