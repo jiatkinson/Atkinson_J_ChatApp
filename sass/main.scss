@@ -50,7 +50,8 @@ main {
 
 .messages { 
 	flex: 1;
-	background-color: white;
+	background-color: #bfcfd6;
+	height: auto;
 }
 
 input, textarea { 
@@ -179,6 +180,10 @@ form {
 		background-color: $cityRed;
 		color: white;
 	}
+
+	.messages {
+		background: $cityGrey !important;
+	}
 	
 }
 
@@ -209,6 +214,10 @@ form {
 		background-color: $tropicalGreen;
 		color: white;
 	}
+
+	.messages {
+		background: $tropicalBlue !important;
+	}
 	
 }
 
@@ -238,6 +247,10 @@ form {
 	.new-message {
 		background-color: $moonLightBlue;
 		color: $moonNavy;
+	}
+
+	.messages {
+		background: $moonNavy !important; 
 	}
 	
 }
