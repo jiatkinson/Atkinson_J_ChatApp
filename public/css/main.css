@@ -34,13 +34,13 @@ body {
   font: 1.25rem Helvetica, Arial;
 }
 body .black {
-  background: #15182a;
+  background: #15182a !important;
 }
 body .red {
-  background: #1e1e1e;
+  background: #1e1e1e !important;
 }
 body .blue {
-  background: #4f98b6;
+  background: #4f98b6 !important;
 }
 body h2 {
   font-size: 1.25rem;
@@ -186,6 +186,10 @@ form input[type=submit] {
 .red .fontChange a {
   color: white;
 }
+.red .new-message {
+  background-color: #ab2228;
+  color: white;
+}
 
 .blue h1, .blue h2 {
   color: white;
@@ -201,6 +205,10 @@ form input[type=submit] {
   background-color: #98d160;
 }
 .blue .fontChange a {
+  color: white;
+}
+.blue .new-message {
+  background-color: #98d160;
   color: white;
 }
 
@@ -219,6 +227,10 @@ form input[type=submit] {
 }
 .black .fontChange a {
   color: white;
+}
+.black .new-message {
+  background-color: #88bad3;
+  color: #15182a;
 }
 
 .indie h1, .indie h2 {
