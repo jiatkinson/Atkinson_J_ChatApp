@@ -10,31 +10,53 @@
 html, body { height: 100%; }
 
 body {
-	font: 16px Helvetica, Arial;
+
+	font: 1.25rem Helvetica, Arial;
+
+	.black {
+		background: $moonNavy;
+	}
+
+	.red {
+		background: $cityGrey;
+	}
+
+	.blue {
+		background: $tropicalBlue;
+	}
+
+	h2 {
+		font-size: 1.25rem;
+		font-style: italic;
+	}
 }
 
 main { 
 	display: flex;
 	height: 100%;
 	flex-direction: row;
+	background-color: #bfcfd6;
 }
 
-.form-container, .messages { padding: 20px; }
+.form-container, .messages {
+	padding: 10px;
+}
+
 .form-container { 
 	flex: 1; 
 	background-color: white;
+	border-top: 10px solid white;
 }
 
 .messages { 
-	flex: 2;
-	background-color: #eee;
-	border: 6px solid #e2e0e0; 
+	flex: 1;
+	background-color: white;
 }
 
 input, textarea { 
 	display: block; 
 	width: 100%;
-	border: 2px solid #bfcfd6;
+	border: 2px solid white;
 	//border-color: #bfcfd6; 
 	border-radius: 4px; 
 	font-size: 0.8rem; 
@@ -52,7 +74,7 @@ form {
 	input[type=submit] { 
 		width: auto; 
 		padding: 10px; 
-		background-color: #0689fc;
+		background-color: black;
 		margin-top: 1rem; 
 		border-radius: 8px;
 		color: white;
@@ -69,6 +91,67 @@ form {
 	li:nth-child(odd) { background: #eee; }
 }
 
+.customTitles {
+	margin-top: 30px;
+}
+
+.customTitles h1 {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: left;
+}
+
+.blackSquare {
+	color: $moonLightBlue;
+	font-size: 40px;
+}
+
+.blackSquare:hover {
+	color: $moonLightBlue;
+	opacity: 0.5;
+}
+
+.redSquare {
+	color: $cityRed;
+	font-size: 40px;
+	z-index: 100;
+}
+
+.redSquare:hover {
+	color: $cityRed;
+	opacity: 0.5;
+}
+
+.blueSquare {
+	color: $tropicalGreen;
+	font-size: 40px;
+}
+
+.blueSquare:hover {
+	color: $tropicalGreen;
+	opacity: 0.5;
+}
+
+.spaceBox {
+	text-align: center;
+}
+
+.cityBox {
+	text-align: center;
+}
+
+.beachBox {
+	text-align: center;
+}
+
+
+.borderSq {
+	margin: 5px;
+	padding: 0px 3px 0px 3px;
+	border-radius: 5px;
+}
+
+
 .red {
 	
 	h1,h2 {
@@ -76,7 +159,20 @@ form {
 		}
 
 	.form-container {
-		background-color: #c45353;
+		background-image: url(../images/city.jpg);
+	}
+
+	.my-message {
+		background-color: $cityRed;
+		color: white;
+	}
+
+	.submitBut {
+		background-color: $cityGrey;
+	}
+
+	.fontChange a {
+		color: white;
 	}
 	
 }
@@ -88,7 +184,20 @@ form {
 		}
 
 	.form-container {
-		background-color: #5388c4;
+		background-image: url(../images/palm.jpg);
+	}
+
+	.my-message {
+		background-color: $tropicalGreen;
+		color: white;
+	}
+
+	.submitBut {
+		background-color: $tropicalGreen;
+	}
+
+	.fontChange a {
+		color: white;
 	}
 	
 }
@@ -100,25 +209,118 @@ form {
 		}
 
 	.form-container {
-		background-color: black;
+		background-image: url(../images/moon.jpg);
+	}
+
+	.my-message {
+		background-color: $moonLightBlue;
+		color: $moonNavy;
+	}
+
+	.submitBut {
+		background-color: $moonLightBlue;
+	}
+
+	.fontChange a {
+		color: white;
 	}
 	
 }
 
-.bold {
+.indie {
 	h1,h2 {
-		font-weight: bold;
+		font-family: 'Indie Flower', cursive;
 		}
+
+	.my-message {
+		font-family: 'Indie Flower', cursive;
+	}
+
+	.submitBut {
+		font-family: 'Indie Flower', cursive;
+	}
 }
 
-.italic {
+.arial {
 	h1,h2 {
-		font-style: italic;
+		font-family: Arial, Helvetica, sans-serif;
 		}
+
+	.my-message {
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	.submitBut {
+		font-family: Arial, Helvetica, sans-serif;
+	}
 }
 
-.default {
+.concert {
 	h1,h2 {
-		font-weight: none;
+		font-family: 'Concert One', cursive;
 		}
+
+	.my-message {
+		font-family: 'Concert One', cursive;
+	}
+
+	.submitBut {
+		font-family: 'Concert One', cursive;
+	}
+}
+
+.fontChange {
+	margin-top: 10px;
+}
+
+.fontChange a {
+	color: black;
+}
+
+.fontButtons {
+	display: block;
+	float: left;
+	font-size: 22px;
+	margin-right: -10px;
+}
+
+#concert {
+	font-family: 'Concert One', cursive;
+}
+
+#indie {
+	font-family: 'Indie Flower', cursive;
+	margin-top: 3px;
+	margin-right: 1px;
+}
+
+#arial {
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 1px;
+}
+
+
+
+@media screen and (min-width: 1023px){
+
+	.customTitles h1 {
+		text-align: left;
+	}
+
+	.fontButtons {
+		float: right;
+	}
+
+	.customTitles {
+		margin-top: 10px;
+	}
+
+	.fontChange {
+		margin-top: 0px;
+	}
+
+	#indie {
+		margin-right: -11px;
+	}
+
 }

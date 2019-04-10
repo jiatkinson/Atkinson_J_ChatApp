@@ -5,7 +5,7 @@
     padding: 8px 12px;
     background-color: white; 
     border-radius: 8px;
-    margin-bottom: 1rem;
+    margin: 20px;
 
     float:left;
     clear: both;
@@ -13,9 +13,6 @@
 
 .my-message {
     float: right !important;
-    color: white;
-}
-
-#my-message {
-    background-color: purple;
+    background-color: white;
+    color: black;
 }

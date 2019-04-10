@@ -3,7 +3,7 @@
   padding: 8px 12px;
   background-color: white;
   border-radius: 8px;
-  margin-bottom: 1rem;
+  margin: 20px;
   float: left;
   clear: both;
 }
@@ -15,11 +15,8 @@
 
 .my-message {
   float: right !important;
-  color: white;
-}
-
-#my-message {
-  background-color: purple;
+  background-color: white;
+  color: black;
 }
 
 /* reset */
@@ -34,34 +31,48 @@ html, body {
 }
 
 body {
-  font: 16px Helvetica, Arial;
+  font: 1.25rem Helvetica, Arial;
+}
+body .black {
+  background: #15182a;
+}
+body .red {
+  background: #1e1e1e;
+}
+body .blue {
+  background: #4f98b6;
+}
+body h2 {
+  font-size: 1.25rem;
+  font-style: italic;
 }
 
 main {
   display: flex;
   height: 100%;
   flex-direction: row;
+  background-color: #bfcfd6;
 }
 
 .form-container, .messages {
-  padding: 20px;
+  padding: 10px;
 }
 
 .form-container {
   flex: 1;
   background-color: white;
+  border-top: 10px solid white;
 }
 
 .messages {
-  flex: 2;
-  background-color: #eee;
-  border: 6px solid #e2e0e0;
+  flex: 1;
+  background-color: white;
 }
 
 input, textarea {
   display: block;
   width: 100%;
-  border: 2px solid #bfcfd6;
+  border: 2px solid white;
   border-radius: 4px;
   font-size: 0.8rem;
   padding: 0.4rem;
@@ -79,7 +90,7 @@ form {
 form input[type=submit] {
   width: auto;
   padding: 10px;
-  background-color: #0689fc;
+  background-color: black;
   margin-top: 1rem;
   border-radius: 8px;
   color: white;
@@ -100,37 +111,196 @@ form input[type=submit] {
   background: #eee;
 }
 
+.customTitles {
+  margin-top: 30px;
+}
+
+.customTitles h1 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.blackSquare {
+  color: #88bad3;
+  font-size: 40px;
+}
+
+.blackSquare:hover {
+  color: #88bad3;
+  opacity: 0.5;
+}
+
+.redSquare {
+  color: #ab2228;
+  font-size: 40px;
+  z-index: 100;
+}
+
+.redSquare:hover {
+  color: #ab2228;
+  opacity: 0.5;
+}
+
+.blueSquare {
+  color: #98d160;
+  font-size: 40px;
+}
+
+.blueSquare:hover {
+  color: #98d160;
+  opacity: 0.5;
+}
+
+.spaceBox {
+  text-align: center;
+}
+
+.cityBox {
+  text-align: center;
+}
+
+.beachBox {
+  text-align: center;
+}
+
+.borderSq {
+  margin: 5px;
+  padding: 0px 3px 0px 3px;
+  border-radius: 5px;
+}
+
 .red h1, .red h2 {
   color: white;
 }
 .red .form-container {
-  background-color: #c45353;
+  background-image: url(../images/city.jpg);
+}
+.red .my-message {
+  background-color: #ab2228;
+  color: white;
+}
+.red .submitBut {
+  background-color: #1e1e1e;
+}
+.red .fontChange a {
+  color: white;
 }
 
 .blue h1, .blue h2 {
   color: white;
 }
 .blue .form-container {
-  background-color: #5388c4;
+  background-image: url(../images/palm.jpg);
+}
+.blue .my-message {
+  background-color: #98d160;
+  color: white;
+}
+.blue .submitBut {
+  background-color: #98d160;
+}
+.blue .fontChange a {
+  color: white;
 }
 
 .black h1, .black h2 {
   color: white;
 }
 .black .form-container {
-  background-color: black;
+  background-image: url(../images/moon.jpg);
+}
+.black .my-message {
+  background-color: #88bad3;
+  color: #15182a;
+}
+.black .submitBut {
+  background-color: #88bad3;
+}
+.black .fontChange a {
+  color: white;
 }
 
-.bold h1, .bold h2 {
-  font-weight: bold;
+.indie h1, .indie h2 {
+  font-family: "Indie Flower", cursive;
+}
+.indie .my-message {
+  font-family: "Indie Flower", cursive;
+}
+.indie .submitBut {
+  font-family: "Indie Flower", cursive;
 }
 
-.italic h1, .italic h2 {
-  font-style: italic;
+.arial h1, .arial h2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.arial .my-message {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.arial .submitBut {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.default h1, .default h2 {
-  font-weight: none;
+.concert h1, .concert h2 {
+  font-family: "Concert One", cursive;
+}
+.concert .my-message {
+  font-family: "Concert One", cursive;
+}
+.concert .submitBut {
+  font-family: "Concert One", cursive;
+}
+
+.fontChange {
+  margin-top: 10px;
+}
+
+.fontChange a {
+  color: black;
+}
+
+.fontButtons {
+  display: block;
+  float: left;
+  font-size: 22px;
+  margin-right: -10px;
+}
+
+#concert {
+  font-family: "Concert One", cursive;
+}
+
+#indie {
+  font-family: "Indie Flower", cursive;
+  margin-top: 3px;
+  margin-right: 1px;
+}
+
+#arial {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 1px;
+}
+
+@media screen and (min-width: 1023px) {
+  .customTitles h1 {
+    text-align: left;
+  }
+
+  .fontButtons {
+    float: right;
+  }
+
+  .customTitles {
+    margin-top: 10px;
+  }
+
+  .fontChange {
+    margin-top: 0px;
+  }
+
+  #indie {
+    margin-right: -11px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
