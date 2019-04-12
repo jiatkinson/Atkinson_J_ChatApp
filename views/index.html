@@ -8,6 +8,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/animate.css">
 	<script src="https://unpkg.com/vue"></script> 
 </head>
 <body>
@@ -28,37 +29,6 @@
 
 
 			<section class="custom-settings row">
-
-			<script>
-
-				function changeRed() {
-					document.getElementById("app").classList.remove('blue','black');
-					document.getElementById("app").classList.add('red');
-				}
-				function changeBlue() {
-					document.getElementById("app").classList.remove('black','red');
-					document.getElementById("app").classList.add('blue');
-				}
-				function changeBlack() {
-					document.getElementById("app").classList.remove('blue','red');
-					document.getElementById("app").classList.add('black');
-				}
-
-				function changeConcert() {
-					document.getElementById("app").classList.remove('arial','indie');
-					document.getElementById("app").classList.add('concert');
-				}
-				function changeIndie() {
-					document.getElementById("app").classList.remove('concert','arial');
-					document.getElementById("app").classList.add('indie');
-				}
-				function changeArial() {
-					document.getElementById("app").classList.remove('concert','indie');
-					document.getElementById("app").classList.add('arial');
-				}
-
-
-			</script>
 
 				<div class="small-12 medium-5 columns customTitles">
 					<div class="small-12 medium-offset-1 large-offset-6 columns">
@@ -108,7 +78,7 @@
 		
 		<section class="clearfix messages">
 			<ul id="messages" v-for="message in messages">
-                <newmessage :msg="message"></newmessage>
+                <newmessage :msg="message" class="animated fadeInDown"></newmessage>
 			</ul>
 		</section>	
 
@@ -117,6 +87,7 @@
 	<script type="module" src="js/main_vm.js"></script>
 	<script src="/js/vendor/jquery.js"></script>
     <script src="/js/vendor/what-input.js"></script>
-    <script src="/js/vendor/foundation.js"></script>
+	<script src="/js/vendor/foundation.js"></script>
+	<script src="js/modules/theme.js"></script>
 </body>
 </html>
