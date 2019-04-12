@@ -46,12 +46,17 @@ main {
 	flex: 1; 
 	background-color: white;
 	border-top: 10px solid white;
+	position: fixed;
+	width: 100%;
+	max-width: 1200px;
+	z-index: 2;
 }
 
 .messages { 
 	flex: 1;
 	background-color: #bfcfd6;
 	height: auto;
+	margin-top: 500px;
 }
 
 input, textarea { 
@@ -339,9 +344,19 @@ form {
 	margin-top: 1px;
 }
 
+@media screen and (min-width: 400px){
+	.messages {
+		margin-top: 500px;
+	}
+}
 
+@media screen and (min-width: 640px){
+	.messages {
+		margin-top: 400px;
+	}
+}
 
-@media screen and (min-width: 1023px){
+@media screen and (min-width: 1024px){
 
 	.customTitles h1 {
 		text-align: left;
@@ -361,6 +376,10 @@ form {
 
 	#indie {
 		margin-right: -11px;
+	}
+
+	.messages {
+		margin-top: 270px;
 	}
 
 }
